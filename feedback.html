@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwapMyBook — Feedback</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="min-h-screen">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="logo-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+      <span class="font-display font-bold text-lg">Swap<span class="brand-gradient-text">mybook</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm">
+      <a href="add-book.html" class="nav-link">Add Book</a>
+      <a href="search-book.html" class="nav-link">Search</a>
+      <a href="exchange-request.html" class="nav-link">Exchange</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="feedback.html" class="nav-link active">Feedback</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="index.html" class="btn-outline px-4 py-2 text-sm">Login</a>
+      <a href="register.html" class="btn-primary px-4 py-2 text-sm">Sign Up</a>
+    </div>
+    <button id="navToggle" class="md:hidden text-xl text-[var(--teal-700)]" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[var(--line)] px-5 py-4 flex flex-col gap-3 text-sm bg-white">
+    <a href="add-book.html" class="nav-link">Add Book</a>
+    <a href="search-book.html" class="nav-link">Search</a>
+    <a href="exchange-request.html" class="nav-link">Exchange</a>
+    <a href="profile.html" class="nav-link">Profile</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+    <a href="index.html" class="btn-outline px-4 py-2 text-sm text-center">Login</a>
+  </div>
+</header>
+
+<main id="main" class="max-w-2xl mx-auto px-5 md:px-8 py-10 md:py-14">
+  <div class="text-center mb-8" data-aos="fade-up">
+    <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-4 text-2xl"><i class="fa-solid fa-star"></i></div>
+    <h1 class="font-display text-2xl md:text-3xl font-bold">We Value Your Feedback</h1>
+    <p class="text-[var(--muted)] text-sm mt-1">Help us make SwapMyBook better for everyone.</p>
+  </div>
+
+  <form data-demo-form data-success-text="Thanks for your feedback!" class="card p-7 md:p-10 space-y-5" novalidate data-aos="fade-up" data-aos-delay="100">
+    <div>
+      <label for="fName" class="block text-sm font-semibold mb-1.5">Your Name</label>
+      <div class="field-wrap"><i class="fa-solid fa-user input-icon"></i>
+        <input id="fName" placeholder="Enter your name" class="input-field"></div>
+    </div>
+
+    <div>
+      <p class="block text-sm font-semibold mb-2">Rating</p>
+      <div class="star-rating flex gap-2 text-2xl" data-input="fRatingValue">
+        <i class="fa-solid fa-star star" data-value="1"></i>
+        <i class="fa-solid fa-star star" data-value="2"></i>
+        <i class="fa-solid fa-star star" data-value="3"></i>
+        <i class="fa-solid fa-star star" data-value="4"></i>
+        <i class="fa-solid fa-star star" data-value="5"></i>
+      </div>
+      <input type="hidden" id="fRatingValue" value="0">
+    </div>
+
+    <div>
+      <label for="fComments" class="block text-sm font-semibold mb-1.5">Comments</label>
+      <textarea id="fComments" rows="4" placeholder="Write your feedback..." class="input-field !pl-4"></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary w-full py-3 flex items-center justify-center gap-2">
+      <i class="fa-regular fa-star"></i> Submit Feedback
+    </button>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#bfe0da]">
+    <div class="flex items-center gap-2"><span class="logo-badge scale-75"><i class="fa-solid fa-book-open-reader"></i></span> Swapmybook</div>
+    <p>© 2026 SwapMyBook. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

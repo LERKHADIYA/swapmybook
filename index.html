@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwapMyBook — Login</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="min-h-screen">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="logo-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+      <span class="font-display font-bold text-lg">Swap<span class="brand-gradient-text">mybook</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm">
+      <a href="add-book.html" class="nav-link">Add Book</a>
+      <a href="search-book.html" class="nav-link">Search</a>
+      <a href="exchange-request.html" class="nav-link">Exchange</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="feedback.html" class="nav-link">Feedback</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="index.html" class="btn-outline px-4 py-2 text-sm active">Login</a>
+      <a href="register.html" class="btn-primary px-4 py-2 text-sm">Sign Up</a>
+    </div>
+    <button id="navToggle" class="md:hidden text-xl text-[var(--teal-700)]" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[var(--line)] px-5 py-4 flex flex-col gap-3 text-sm bg-white">
+    <a href="add-book.html" class="nav-link">Add Book</a>
+    <a href="search-book.html" class="nav-link">Search</a>
+    <a href="exchange-request.html" class="nav-link">Exchange</a>
+    <a href="profile.html" class="nav-link">Profile</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+    <a href="register.html" class="btn-primary px-4 py-2 text-sm text-center">Sign Up</a>
+  </div>
+</header>
+
+<main id="main">
+<section class="max-w-7xl mx-auto px-5 md:px-8 py-10 md:py-16 grid lg:grid-cols-2 gap-10 items-center">
+
+  <!-- Login card -->
+  <div class="card p-8 md:p-10 relative order-2 lg:order-1" data-aos="fade-right">
+    <div class="mb-7">
+      <h1 class="font-display text-2xl md:text-3xl font-bold">Welcome Back <i class="fa-solid fa-seedling text-[var(--green-500)] text-xl"></i></h1>
+      <p class="text-[var(--muted)] mt-1 text-sm">Login to continue your journey with SwapMyBook.</p>
+    </div>
+
+    <form data-demo-form data-success-text="Logged in! Redirecting to your dashboard…" class="space-y-5" novalidate>
+      <div>
+        <label for="loginEmail" class="block text-sm font-semibold mb-1.5">Email Address</label>
+        <div class="field-wrap">
+          <i class="fa-solid fa-envelope input-icon"></i>
+          <input id="loginEmail" name="email" type="email" required placeholder="Enter your email" class="input-field">
+        </div>
+      </div>
+      <div>
+        <div class="flex items-center justify-between mb-1.5">
+          <label for="loginPassword" class="block text-sm font-semibold">Password</label>
+          <a href="#" class="text-xs font-semibold text-[var(--teal-700)] hover:underline">Forgot Password?</a>
+        </div>
+        <div class="field-wrap">
+          <i class="fa-solid fa-lock input-icon"></i>
+          <input id="loginPassword" name="password" type="password" required placeholder="Enter your password" class="input-field pr-11">
+          <button type="button" data-toggle-pass="loginPassword" class="absolute right-3.5 top-1/2 -translate-y-1/2 text-[var(--muted)]" aria-label="Show password">
+            <i class="fa-solid fa-eye"></i>
+          </button>
+        </div>
+      </div>
+
+      <label class="flex items-center gap-2 text-sm text-[var(--muted)]">
+        <input type="checkbox" class="rounded border-[var(--line)] text-[var(--green-500)] focus:ring-[var(--green-300)]">
+        Keep me signed in
+      </label>
+
+      <button type="submit" class="btn-primary w-full py-3 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-right-to-bracket"></i> Login
+      </button>
+
+      <div class="flex items-center gap-3 text-xs text-[var(--muted)]">
+        <span class="h-px flex-1 bg-[var(--line)]"></span> OR <span class="h-px flex-1 bg-[var(--line)]"></span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-3">
+        <button type="button" class="btn-outline py-2.5 flex items-center justify-center gap-2 text-sm"><i class="fa-brands fa-google text-[#4285F4]"></i> Google</button>
+        <button type="button" class="btn-outline py-2.5 flex items-center justify-center gap-2 text-sm"><i class="fa-brands fa-apple"></i> Apple</button>
+      </div>
+    </form>
+
+    <p class="text-center text-sm text-[var(--muted)] mt-6">
+      Don't have an account? <a href="register.html" class="font-semibold text-[var(--green-700)] hover:underline">Sign Up <i class="fa-solid fa-arrow-right text-xs"></i></a>
+    </p>
+  </div>
+
+  <!-- Brand panel -->
+  <div class="order-1 lg:order-2 relative" data-aos="fade-left">
+    <div class="flex items-center gap-2 text-[var(--teal-700)] font-semibold mb-4">
+      <i class="fa-solid fa-shield-heart text-[var(--green-500)] text-xl"></i>
+      Trusted. Secure. Reliable.
+    </div>
+    <h2 class="font-display text-3xl md:text-4xl font-extrabold leading-tight mb-6">
+      Exchange books, <br> share <span class="brand-gradient-text">knowledge</span>, <br> build connections.
+    </h2>
+
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+      <div class="text-center" data-aos="zoom-in" data-aos-delay="50">
+        <div class="w-11 h-11 mx-auto rounded-xl bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-2"><i class="fa-solid fa-user-shield"></i></div>
+        <p class="text-xs font-semibold">Verified Users</p>
+      </div>
+      <div class="text-center" data-aos="zoom-in" data-aos-delay="100">
+        <div class="w-11 h-11 mx-auto rounded-xl bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-2"><i class="fa-solid fa-lock"></i></div>
+        <p class="text-xs font-semibold">Secure Platform</p>
+      </div>
+      <div class="text-center" data-aos="zoom-in" data-aos-delay="150">
+        <div class="w-11 h-11 mx-auto rounded-xl bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-2"><i class="fa-solid fa-right-left"></i></div>
+        <p class="text-xs font-semibold">Easy Exchange</p>
+      </div>
+      <div class="text-center" data-aos="zoom-in" data-aos-delay="200">
+        <div class="w-11 h-11 mx-auto rounded-xl bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-2"><i class="fa-solid fa-leaf"></i></div>
+        <p class="text-xs font-semibold">Green & Sustainable</p>
+      </div>
+    </div>
+
+    <div class="card flex divide-x divide-[var(--line)] overflow-hidden" data-aos="fade-up">
+      <div class="flex-1 text-center py-4">
+        <p class="font-display font-extrabold text-xl text-[var(--teal-700)]">10K+</p>
+        <p class="text-xs text-[var(--muted)]">Happy Users</p>
+      </div>
+      <div class="flex-1 text-center py-4">
+        <p class="font-display font-extrabold text-xl text-[var(--teal-700)]">50K+</p>
+        <p class="text-xs text-[var(--muted)]">Books Exchanged</p>
+      </div>
+      <div class="flex-1 text-center py-4">
+        <p class="font-display font-extrabold text-xl text-[var(--teal-700)]">100+</p>
+        <p class="text-xs text-[var(--muted)]">Colleges Connected</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Forms directory -->
+<section class="max-w-7xl mx-auto px-5 md:px-8 pb-16">
+  <div class="text-center mb-8" data-aos="fade-up">
+    <h3 class="font-display text-xl md:text-2xl font-bold">Explore all forms</h3>
+    <p class="text-[var(--muted)] text-sm mt-1">Everything you need to swap, read and repeat</p>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <a href="register.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="0">
+      <div class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-user-plus"></i></div>
+      <p class="font-semibold text-sm">Registration</p>
+      <p class="text-xs text-[var(--muted)] mt-1">Create a new account</p>
+    </a>
+    <a href="add-book.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="50">
+      <div class="w-10 h-10 rounded-lg bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-book-medical"></i></div>
+      <p class="font-semibold text-sm">Add Book</p>
+      <p class="text-xs text-[var(--muted)] mt-1">List a book to swap</p>
+    </a>
+    <a href="search-book.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="100">
+      <div class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-magnifying-glass"></i></div>
+      <p class="font-semibold text-sm">Search Books</p>
+      <p class="text-xs text-[var(--muted)] mt-1">Find your next read</p>
+    </a>
+    <a href="exchange-request.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="150">
+      <div class="w-10 h-10 rounded-lg bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-arrows-rotate"></i></div>
+      <p class="font-semibold text-sm">Exchange Request</p>
+      <p class="text-xs text-[var(--muted)] mt-1">Request a swap</p>
+    </a>
+    <a href="profile.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="0">
+      <div class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-id-card"></i></div>
+      <p class="font-semibold text-sm">My Profile</p>
+      <p class="text-xs text-[var(--muted)] mt-1">Manage your details</p>
+    </a>
+    <a href="contact.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="50">
+      <div class="w-10 h-10 rounded-lg bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-phone-volume"></i></div>
+      <p class="font-semibold text-sm">Contact Us</p>
+      <p class="text-xs text-[var(--muted)] mt-1">We're here to help</p>
+    </a>
+    <a href="feedback.html" class="card p-5 hover:-translate-y-1 transition-transform" data-aos="fade-up" data-aos-delay="100">
+      <div class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center mb-3"><i class="fa-solid fa-star"></i></div>
+      <p class="font-semibold text-sm">Feedback</p>
+      <p class="text-xs text-[var(--muted)] mt-1">Share your experience</p>
+    </a>
+    <a href="index.html" class="card p-5 hover:-translate-y-1 transition-transform bg-[var(--teal-700)] text-white" data-aos="fade-up" data-aos-delay="150">
+      <div class="w-10 h-10 rounded-lg bg-white/15 flex items-center justify-center mb-3"><i class="fa-solid fa-right-to-bracket"></i></div>
+      <p class="font-semibold text-sm">Login</p>
+      <p class="text-xs text-white/80 mt-1">Access your account</p>
+    </a>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-10 grid md:grid-cols-4 gap-8 text-sm">
+    <div>
+      <div class="flex items-center gap-2 mb-3">
+        <span class="logo-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+        <span class="font-display font-bold text-lg text-white">Swapmybook</span>
+      </div>
+      <p class="text-[#bfe0da] text-xs leading-relaxed">A platform for students and book lovers to exchange books, share knowledge and build connections.</p>
+    </div>
+    <div>
+      <p class="font-semibold text-white mb-3">Quick Links</p>
+      <ul class="space-y-2 text-[#bfe0da]">
+        <li><a href="add-book.html">Add Book</a></li>
+        <li><a href="search-book.html">Search Books</a></li>
+        <li><a href="exchange-request.html">Exchange</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-white mb-3">Account</p>
+      <ul class="space-y-2 text-[#bfe0da]">
+        <li><a href="index.html">Login</a></li>
+        <li><a href="register.html">Sign Up</a></li>
+        <li><a href="profile.html">My Profile</a></li>
+      </ul>
+    </div>
+    <div>
+      <p class="font-semibold text-white mb-3">Follow Us</p>
+      <div class="flex gap-3 text-white">
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-4 text-center text-xs text-[#bfe0da]">© 2026 SwapMyBook. All rights reserved.</div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

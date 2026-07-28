@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwapMyBook — Add Book</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="min-h-screen">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="logo-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+      <span class="font-display font-bold text-lg">Swap<span class="brand-gradient-text">mybook</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm">
+      <a href="add-book.html" class="nav-link active">Add Book</a>
+      <a href="search-book.html" class="nav-link">Search</a>
+      <a href="exchange-request.html" class="nav-link">Exchange</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="feedback.html" class="nav-link">Feedback</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="index.html" class="btn-outline px-4 py-2 text-sm">Login</a>
+      <a href="register.html" class="btn-primary px-4 py-2 text-sm">Sign Up</a>
+    </div>
+    <button id="navToggle" class="md:hidden text-xl text-[var(--teal-700)]" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[var(--line)] px-5 py-4 flex flex-col gap-3 text-sm bg-white">
+    <a href="add-book.html" class="nav-link">Add Book</a>
+    <a href="search-book.html" class="nav-link">Search</a>
+    <a href="exchange-request.html" class="nav-link">Exchange</a>
+    <a href="profile.html" class="nav-link">Profile</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+    <a href="index.html" class="btn-outline px-4 py-2 text-sm text-center">Login</a>
+  </div>
+</header>
+
+<main id="main" class="max-w-4xl mx-auto px-5 md:px-8 py-10 md:py-14">
+  <div class="text-center mb-8" data-aos="fade-up">
+    <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-4 text-2xl"><i class="fa-solid fa-book-medical"></i></div>
+    <h1 class="font-display text-2xl md:text-3xl font-bold">Add New Book</h1>
+    <p class="text-[var(--muted)] text-sm mt-1">List your book and find someone to swap it with.</p>
+  </div>
+
+  <form data-demo-form data-success-text="Book added successfully!" class="card p-7 md:p-10 space-y-5" novalidate data-aos="fade-up" data-aos-delay="100">
+    <div class="grid md:grid-cols-2 gap-5">
+      <div>
+        <label for="bookTitle" class="block text-sm font-semibold mb-1.5">Book Title *</label>
+        <div class="field-wrap"><i class="fa-solid fa-book input-icon"></i>
+          <input id="bookTitle" required placeholder="Enter book title" class="input-field"></div>
+      </div>
+      <div>
+        <label for="authorName" class="block text-sm font-semibold mb-1.5">Author Name *</label>
+        <div class="field-wrap"><i class="fa-solid fa-feather input-icon"></i>
+          <input id="authorName" required placeholder="Enter author name" class="input-field"></div>
+      </div>
+      <div>
+        <label for="bookCategory" class="block text-sm font-semibold mb-1.5">Category *</label>
+        <div class="field-wrap"><i class="fa-solid fa-tags input-icon"></i>
+          <select id="bookCategory" required class="input-field appearance-none">
+            <option value="">Select Category</option>
+            <option>Academic</option><option>Fiction</option><option>Non-Fiction</option><option>Reference</option><option>Competitive Exam</option>
+          </select></div>
+      </div>
+      <div>
+        <label for="bookLanguage" class="block text-sm font-semibold mb-1.5">Language *</label>
+        <div class="field-wrap"><i class="fa-solid fa-language input-icon"></i>
+          <select id="bookLanguage" required class="input-field appearance-none">
+            <option value="">Select Language</option>
+            <option>English</option><option>Gujarati</option><option>Hindi</option>
+          </select></div>
+      </div>
+      <div>
+        <label for="publisher" class="block text-sm font-semibold mb-1.5">Publisher</label>
+        <div class="field-wrap"><i class="fa-solid fa-building input-icon"></i>
+          <input id="publisher" placeholder="Enter publisher" class="input-field"></div>
+      </div>
+      <div>
+        <label for="pubYear" class="block text-sm font-semibold mb-1.5">Publication Year</label>
+        <div class="field-wrap"><i class="fa-regular fa-calendar input-icon"></i>
+          <input id="pubYear" type="number" min="1900" max="2026" placeholder="Year" class="input-field"></div>
+      </div>
+      <div>
+        <label for="condition" class="block text-sm font-semibold mb-1.5">Condition *</label>
+        <div class="field-wrap"><i class="fa-solid fa-star-half-stroke input-icon"></i>
+          <select id="condition" required class="input-field appearance-none">
+            <option value="">Select Condition</option>
+            <option>New</option><option>Like New</option><option>Good</option><option>Fair</option>
+          </select></div>
+      </div>
+      <div>
+        <label for="exchangeType" class="block text-sm font-semibold mb-1.5">Exchange Type *</label>
+        <div class="field-wrap"><i class="fa-solid fa-right-left input-icon"></i>
+          <select id="exchangeType" required class="input-field appearance-none">
+            <option value="">Select Type</option>
+            <option>Swap Only</option><option>Free Give-away</option><option>Sell</option>
+          </select></div>
+      </div>
+    </div>
+
+    <div>
+      <label class="block text-sm font-semibold mb-1.5">Upload Book Image *</label>
+      <label for="bookImage" class="flex items-center gap-3 border-2 border-dashed border-[var(--line)] rounded-xl px-4 py-4 cursor-pointer hover:border-[var(--teal-500)] transition-colors">
+        <span class="w-9 h-9 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center"><i class="fa-solid fa-image"></i></span>
+        <span data-file-label="bookImage" class="text-sm text-[var(--muted)]">Choose File</span>
+      </label>
+      <input id="bookImage" type="file" accept="image/*" class="file-input hidden">
+    </div>
+
+    <div>
+      <label for="bookDesc" class="block text-sm font-semibold mb-1.5">Description *</label>
+      <textarea id="bookDesc" required rows="3" placeholder="Write short description about the book..." class="input-field !pl-4"></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary w-full py-3 flex items-center justify-center gap-2">
+      <i class="fa-solid fa-plus"></i> Add Book
+    </button>
+  </form>
+</main>
+
+<footer class="site-footer">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#bfe0da]">
+    <div class="flex items-center gap-2"><span class="logo-badge scale-75"><i class="fa-solid fa-book-open-reader"></i></span> Swapmybook</div>
+    <p>© 2026 SwapMyBook. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>

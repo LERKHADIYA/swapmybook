@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SwapMyBook — Contact Us</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body class="min-h-screen">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2">
+      <span class="logo-badge"><i class="fa-solid fa-book-open-reader"></i></span>
+      <span class="font-display font-bold text-lg">Swap<span class="brand-gradient-text">mybook</span></span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7 text-sm">
+      <a href="add-book.html" class="nav-link">Add Book</a>
+      <a href="search-book.html" class="nav-link">Search</a>
+      <a href="exchange-request.html" class="nav-link">Exchange</a>
+      <a href="profile.html" class="nav-link">Profile</a>
+      <a href="contact.html" class="nav-link active">Contact</a>
+      <a href="feedback.html" class="nav-link">Feedback</a>
+    </nav>
+    <div class="hidden md:flex items-center gap-3">
+      <a href="index.html" class="btn-outline px-4 py-2 text-sm">Login</a>
+      <a href="register.html" class="btn-primary px-4 py-2 text-sm">Sign Up</a>
+    </div>
+    <button id="navToggle" class="md:hidden text-xl text-[var(--teal-700)]" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
+  </div>
+  <div id="mobileMenu" class="hidden md:hidden border-t border-[var(--line)] px-5 py-4 flex flex-col gap-3 text-sm bg-white">
+    <a href="add-book.html" class="nav-link">Add Book</a>
+    <a href="search-book.html" class="nav-link">Search</a>
+    <a href="exchange-request.html" class="nav-link">Exchange</a>
+    <a href="profile.html" class="nav-link">Profile</a>
+    <a href="contact.html" class="nav-link">Contact</a>
+    <a href="feedback.html" class="nav-link">Feedback</a>
+    <a href="index.html" class="btn-outline px-4 py-2 text-sm text-center">Login</a>
+  </div>
+</header>
+
+<main id="main" class="max-w-5xl mx-auto px-5 md:px-8 py-10 md:py-14">
+  <div class="text-center mb-8" data-aos="fade-up">
+    <div class="w-14 h-14 mx-auto rounded-2xl bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center mb-4 text-2xl"><i class="fa-solid fa-phone-volume"></i></div>
+    <h1 class="font-display text-2xl md:text-3xl font-bold">We're Here to Help!</h1>
+    <p class="text-[var(--muted)] text-sm mt-1">Send us your questions, we usually reply within 24 hours.</p>
+  </div>
+
+  <div class="grid lg:grid-cols-5 gap-6">
+    <form data-demo-form data-success-text="Message sent! We'll get back to you soon." class="card p-7 md:p-10 space-y-5 lg:col-span-3" novalidate data-aos="fade-up" data-aos-delay="100">
+      <div class="grid md:grid-cols-2 gap-5">
+        <div>
+          <label for="cName" class="block text-sm font-semibold mb-1.5">Your Name</label>
+          <div class="field-wrap"><i class="fa-solid fa-user input-icon"></i>
+            <input id="cName" required placeholder="Enter your name" class="input-field"></div>
+        </div>
+        <div>
+          <label for="cEmail" class="block text-sm font-semibold mb-1.5">Email Address</label>
+          <div class="field-wrap"><i class="fa-solid fa-envelope input-icon"></i>
+            <input id="cEmail" type="email" required placeholder="Enter your email" class="input-field"></div>
+        </div>
+      </div>
+      <div>
+        <label for="cSubject" class="block text-sm font-semibold mb-1.5">Subject</label>
+        <div class="field-wrap"><i class="fa-solid fa-heading input-icon"></i>
+          <input id="cSubject" required placeholder="Enter subject" class="input-field"></div>
+      </div>
+      <div>
+        <label for="cMessage" class="block text-sm font-semibold mb-1.5">Message</label>
+        <textarea id="cMessage" required rows="4" placeholder="Write your message..." class="input-field !pl-4"></textarea>
+      </div>
+      <button type="submit" class="btn-primary w-full py-3 flex items-center justify-center gap-2">
+        <i class="fa-solid fa-paper-plane"></i> Send Message
+      </button>
+    </form>
+
+    <div class="lg:col-span-2 space-y-4" data-aos="fade-up" data-aos-delay="150">
+      <div class="card p-5 flex items-start gap-3">
+        <span class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope"></i></span>
+        <div><p class="font-semibold text-sm">Email</p><p class="text-xs text-[var(--muted)]">support@swapmybook.in</p></div>
+      </div>
+      <div class="card p-5 flex items-start gap-3">
+        <span class="w-10 h-10 rounded-lg bg-[var(--green-500)]/10 text-[var(--green-700)] flex items-center justify-center shrink-0"><i class="fa-solid fa-phone"></i></span>
+        <div><p class="font-semibold text-sm">Phone</p><p class="text-xs text-[var(--muted)]">Mon–Sat, 10am–6pm</p></div>
+      </div>
+      <div class="card p-5 flex items-start gap-3">
+        <span class="w-10 h-10 rounded-lg bg-[var(--teal-700)]/10 text-[var(--teal-700)] flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot"></i></span>
+        <div><p class="font-semibold text-sm">Location</p><p class="text-xs text-[var(--muted)]">Surendranagar, Gujarat</p></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="max-w-7xl mx-auto px-5 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-[#bfe0da]">
+    <div class="flex items-center gap-2"><span class="logo-badge scale-75"><i class="fa-solid fa-book-open-reader"></i></span> Swapmybook</div>
+    <p>© 2026 SwapMyBook. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script src="assets/script.js"></script>
+</body>
+</html>
